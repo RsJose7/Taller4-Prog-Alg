@@ -1,0 +1,167 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMk7wgvANh4d/bziXiE66eF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/RsJose7/Taller4-Prog-Alg/blob/main/Taller%20%234%20-%20Problema%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Algoritmo para generar discursos politicos\n",
+        "\n",
+        "1. Iniciar\n",
+        "2. Hacer una lista llamada \"discurso\"\n",
+        "3. Para cada elemento en la lista \"titulos\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "4. Para cada elemento en la lista \"publico_obejetivo\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "5. Para cada elemento en la lista \"condiciones\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "6. Para cada elemento en la lista \"compromiso\":\n",
+        "- Agregar a la lista \"discurso\"\n",
+        "7. Para cada elemento en la lsita \"ilusiones_lucha\":\n",
+        "- Agregar a la lista \"discurso\"\n",
+        "8. Para ca elemento en la lista \"promesas\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "9. Para cada elemento en la lista \"beneficios_populistas\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "10. Para cada elemento en la lista \"cantidad_votos\":\n",
+        "- Agregar el elemento a la lista \"discurso\"\n",
+        "11. Agregar a la lista \"discurso\"\n",
+        "12. Finalizar\n",
+        "\n",
+        "```\n",
+        "Pseudocodigo\n",
+        "\n",
+        "Program GeneradorDiscursoPolitico\n",
+        "// Programa para generar un discurso político aleatorio\n",
+        "\n",
+        "Start\n",
+        "// Declarar listas para cada categoría\n",
+        "\n",
+        "Declare list TITULOS = [\"Queridos\", \"Apreciados\", \"Distinguidos\", \"Honorables\", \"Estimados\", \"Respetados\"]\n",
+        "\n",
+        "Declare list PUBLICO_OBJETIVO = [\"Compatriotas\", \"Copartidarios\", \"Amigos\", \"Coterraneos\", \"Conciudadanos\", \"Electores\"]\n",
+        "\n",
+        "Declare list CONDICIONES = [\"En mi gobierno\", \"Con su apoyo\", \"Siendo elegido\", \"Con su ayuda\", \"Si me siguen\", \"Durante mi mandato\"]\n",
+        "\n",
+        "Declare list COMPROMISOS = [\"Voy a derrotar\", \"Venceré\", \"Eliminaré\", \"Acabaré\", \"Lucharé contra\", \"Combatiré\"]\n",
+        "\n",
+        "Declare list ILUSIONES_LUCHA = [\"La violencia y\", \"La delincuencia y\", \"La corrupción y\", \"La inflación y\", \"La pobreza y\", \"El hambre y\"]\n",
+        "\n",
+        "Declare list PROMESAS = [\"Trabajaré por\", \"Garantizaré\", \"Protegeré\", \"Velaré por\", \"Promoveré\", \"Defenderé\"]\n",
+        "\n",
+        "Declare list BENEFICIOS_POPULISTAS = [\"La educación\", \"El empleo\", \"La seguridad\", \"La paz\", \"La igualdad\", \"La salud\"]\n",
+        "\n",
+        "Declare list CANTIDAD_VOTOS = [\"Del país\", \"De la ciudad\", \"De la comunidad\", \"De la población\", \"Para toda la gente\", \"De cada colombiano\"]\n",
+        "\n",
+        "// Declarar variables para almacenar las selecciones\n",
+        "Declare String TITULO\n",
+        "Declare String AUDIENCIA\n",
+        "Declare String CONDICION\n",
+        "Declare String COMPROMISO\n",
+        "Declare String ILUSION\n",
+        "Declare String PROMESA\n",
+        "Declare String BENEFICIO\n",
+        "DEclare String VOTOS\n",
+        "\n",
+        "// Seleccionar aleatoriamente valores de cada lista\n",
+        "Set TITULO = seleccionar aleatoriamente TITULO\n",
+        "Set AUDIENCIA = seleccionar aleatoriamente PUBLICO_OBJETIVO\n",
+        "Set CONDICION = seleccionar aleatoriamenteCONDICIONES\n",
+        "Set COMPROMISO = seleccionar aleatoriamente COMPROMISOS\n",
+        "Set ILUSION = seleccionar aleatoriamente ILUSIONES_LUCHA\n",
+        "Set PROMESA = seleccionar aleatoriamente PROMESAS\n",
+        "Set BENEFICIO = seleccionar aleatoriamente BENEFICIOS_POPULISTAS\n",
+        "Set VOTOS = seleccionar aleatoriamente CANTIDAD_VOTOS\n",
+        "\n",
+        "// Construir el discurso concatenando las selecciones\n",
+        "Declare String DISCURSO\n",
+        "Set DISCURSO = TITULO + \" \" + AUDIENCIA + \", \" + CONDICION + \" \" + COMPROMISO + \" \" + ILUSION + \" \" + PROMESA + \" \" + BENEFICIO + \" \" + VOTOS + \".\"\n",
+        "\n",
+        "// Mostrar el discurso generado\n",
+        "Display DISCURSO\n",
+        "\n",
+        "End\n",
+        "\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "3a577NbhQnTG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "### codigo en phyton\n",
+        "\n",
+        "import random\n",
+        "\n",
+        "# lista de frases segú las categorías de la imagen\n",
+        "titulos = [\"Queridos\", \"Apreciados\", \"Distinguidos\", \"Honorables\", \"Estimados\", \"Respetados\"]\n",
+        "publico_objetivo = [\"Compatriotas\", \"Copartidarios\", \"Amigos\", \"Coterraneos\", \"Conciudadanos\", \"Electores\"]\n",
+        "condiciones = [\"En mi gobierno\", \"Con su apoyo\", \"Siendo elegido\", \"Con su ayuda\", \"Si me siguen\", \"Durante mi mandato\"]\n",
+        "compromisos = [\"Voy a derrotar\", \"Venceré\", \"Eliminaré\", \"Acabaré\", \"Lucharé contra\", \"Combatiré\"]\n",
+        "luchas = [\"La violencia y\", \"La delincuencia y\", \"La corrupción y\", \"La inflación y\", \"La pobreza y\", \"El hambre y\"]\n",
+        "promesas = [\"Trabajaré por\", \"Garantizaré\", \"Protegeré\", \"Velaré por\", \"Promoveré\", \"Defenderé\"]\n",
+        "beneficios = [\"La educación\", \"El empleo\", \"La seguridad\", \"La paz\", \"La igualdad\", \"La salud\"]\n",
+        "votos = [\"Del país\", \"De la ciudad\", \"De la comunidad\", \"De la población\", \"Para toda la gente\", \"De cada colombiano\"]\n",
+        "\n",
+        "# selección aleatoria de cada parte del discurso\n",
+        "titulo = random.choice(titulos)\n",
+        "objetivo = random.choice(publico_objetivo)\n",
+        "condicion = random.choice(condiciones)\n",
+        "compromiso = random.choice(compromisos)\n",
+        "lucha = random.choice(luchas)\n",
+        "promesa = random.choice(promesas)\n",
+        "beneficio = random.choice(beneficios)\n",
+        "voto = random.choice(votos)\n",
+        "\n",
+        "# crear el discurso con un tono humanista\n",
+        "discurso = titulo + \" \" + objetivo + \", \" + condicion + \" \" + compromiso + \" \" + lucha + \" \" + promesa + \" \" + beneficio + \" \" + voto + \".\"\n",
+        "\n",
+        "# mostrar el discurso generado\n",
+        "print(discurso)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oPoomPsaZOYt",
+        "outputId": "b915953b-63b2-49d0-d7ec-f8b04304a7bf"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Distinguidos Electores, Durante mi mandato Lucharé contra La pobreza y Promoveré La educación De la ciudad.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
